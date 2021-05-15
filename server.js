@@ -84,12 +84,12 @@ app.post("/messages/new", (req, res) => {
 
 if (process.env.NODE_ENV == "production") {
   app.use(express.static("whatsapp-frontend/build"));
-  const path = require("path");
-  app.get("*", (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, "whatsapp-frontend", "build", "index.html")
-    );
-  });
+  //   const path = require("path");
+  //   app.get("*", (req, res) => {
+  //     res.sendFile(
+  //       path.resolve(__dirname, "whatsapp-frontend", "build", "index.html")
+  //     );
+  //   });
 }
 // Listen
 app.listen(port, () => console.log(`Listening on localhost:${port}`));
