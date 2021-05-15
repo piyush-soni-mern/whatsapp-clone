@@ -1,0 +1,24 @@
+{
+  "name": "whatsapp-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONNFIG_PRODUCTION=false npm install --prefix whatsapp-frontend && npm run build --prefix whatsapp-frontend"
+  },
+  "author": "Piyush Soni",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.14",
+    "pusher": "^4.0.2"
+  },
+  "engines":{
+    "node": "12.x",
+    "npm": "6.x"
+  }
+}
