@@ -56,7 +56,7 @@ db.once("open", () => {
 // ????
 
 // API Routes
-app.get("/", (req, res) => res.status(200).send("hello world"));
+// app.get("/", (req, res) => res.status(200).send("hello world"));
 
 app.get("/messages/sync", (req, res) => {
   Messages.find((err, data) => {
